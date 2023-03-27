@@ -36,7 +36,9 @@ const connectDB = require('./db/connect')
 // routes
 
 
-
+app.get('/', (req, res) => {
+    res.send(<h1><a href='/api/v1/jobs'>Job Api</a></h1>)
+})
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/jobs', auth, jobsRouter)
 
