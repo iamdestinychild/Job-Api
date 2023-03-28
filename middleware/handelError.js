@@ -4,7 +4,7 @@ const handelErrors = (err, req, res, next) => {
 
     let customError = {
         statusCode: err.statusCode || StatusCodes.INTERNAL_SERVER_ERROR,
-        msg: err.massage || 'Something went wrong, please try again'
+        msg: err.message || 'Something went wrong, please try again'
     }
 
     if (err.name === 'ValidationError') {
